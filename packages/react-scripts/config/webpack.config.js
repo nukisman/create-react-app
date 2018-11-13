@@ -180,6 +180,7 @@ module.exports = function(webpackEnv) {
           (info => path.resolve(info.absoluteResourcePath).replace(/\\/g, '/')),
     },
     optimization: {
+      namedModules: true,
       minimize: isEnvProduction,
       minimizer: [
         // This is only used in production mode
